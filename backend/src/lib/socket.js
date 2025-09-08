@@ -7,8 +7,12 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:5173"],
-  },
+    origin: [
+      "http://localhost:5173",
+      "https://your-frontend-service.onrender.com" // ← Add your frontend URL here too
+    ],
+    methods: ["GET", "POST"]
+  }
 });
 
 export function getReceiverSocketId(userId) {
