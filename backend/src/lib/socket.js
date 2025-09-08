@@ -6,11 +6,12 @@ const app = express();
 const server = http.createServer(app);
 
 // In lib/socket.js
+// In lib/socket.js
 const io = new Server(server, {
   cors: {
     origin: [
       "http://localhost:5173",
-      "https://chatting-app-frontend-xj60.onrender.com"
+      "https://chatting-app-frontend-adsl.onrender.com" // ← SAME FRONTEND URL
     ],
     methods: ["GET", "POST"]
   }
