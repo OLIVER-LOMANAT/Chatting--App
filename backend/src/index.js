@@ -21,11 +21,12 @@ app.use(cookieParser());
 // Update CORS for production
 // In src/index.js - update CORS
 // In backend src/index.js
+// In backend src/index.js
 app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://chatting-app-frontend-adsl.onrender.com" // ← YOUR FRONTEND URL
+      "https://https://chatting-app-frontend-i4kz.onrender.com" // ← YOUR FRONTEND URL
     ],
     credentials: true,
   })
