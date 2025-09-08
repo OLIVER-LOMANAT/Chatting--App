@@ -19,11 +19,12 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Update CORS for production
+// In src/index.js - update CORS
 app.use(
   cors({
     origin: [
-      "http://localhost:5173", 
-      "https://your-frontend-service.onrender.com" // ← Replace with your actual frontend URL
+      "http://localhost:5173",
+      "https://chatting-app-frontend-xj60.onrender.com"
     ],
     credentials: true,
   })
