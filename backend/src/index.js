@@ -10,33 +10,27 @@ import { app, server } from "./lib/socket.js";
 
 dotenv.config();
 
-const PORT = process.env.PORT || 5001; // Added default port
-
-// Remove path import since we're not using it
-// import path from "path";
+const PORT = process.env.PORT || 5001;
 
 app.use(express.json());
 app.use(cookieParser());
 
-// Update CORS for production
-// In src/index.js - update CORS
-// In backend src/index.js
-// In backend src/index.js
+
 app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://https://chatting-app-frontend-i4kz.onrender.com" // ← YOUR FRONTEND URL
+      "https://chatting-app-frontend-i4kz.onrender.com" 
     ],
     credentials: true,
   })
 );
 
-// API routes only
+// API routes
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
-// Remove completely the static file serving section
+
 // if (process.env.NODE_ENV === "production") {
 //   app.use(express.static(path.join(__dirname, "../frontend/dist")));
 //   app.get("*", (req, res) => {
